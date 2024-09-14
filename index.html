@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sad Quest 💔</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Sad Quest 💔</h1>
+        <p>Click the button to reveal a quote!</p>
+        <button id="quoteButton">Show Quote 🥀 </button>
+        <div id="heartContainer" class="heart-container hidden">
+            <div class="heart">
+                <div class="quote" id="quote"></div>
+            </div>
+        </div>
+    </div>
+    <script >
+        document.addEventListener('DOMContentLoaded', function() {
+            const quotes = [
+                // Talha Anjum's Quotes
+                "Mujh se doori apni aadat bana lo, maine jeene ka tareeqa ik shaayari mein chhupa rakha hai. 🥀😢",
+                "Meri dosti bhi aadat hai tumhari, main woh raasta hoon jo safar mein toh hai par manzil nahi. 😭😢",
+                "Meri shayari mein aajkal sirf gumaan hai, raato ke aakhir mein din ka intezaar hai. 😭😢",
+                "Aankhon ke neeche thakaawat hai purani, tujh se baat karne ki bhi aadat hai purani. 🥀😢",
+                "Tere bina zindagi mein maza nahi, raat ko neend nahi, din mein jaza nahi. 😢🌸",
+                "Tere khayalon mein guzaar deta hoon din raat, tujh se door rehkar zindagi lagti hai ek saza. 😢🌺",
+                
+                // Talha Younus's Quotes
+                "Zindagi ki raahon mein hum saath chalay, magar waqt ne humko juda kar diya. 🥀😢",
+                "Jo yaadein thi haseen, ab woh sab dard ban gayi, jo lamhe they apne, ab woh sab raat ban gayi. 😭😢",
+                "Zindagi hai mushkil, in lamhon mein khushi kahan, apno se door ho kar milti hai yeh saza kahan. 😢🌸",
+                "Meri zindagi mein tujh se jyada kuch nahi, aur tere bina meri duniya mein roshni nahi. 😢🥀",
+                
+                // Umer's Quotes
+                "Teri yaadon ki chahat mein, dil ko bas dard mila, khud se bhi juda ho gaya, aaj yeh dil bas ro raha hai. 😢💔",
+                "Meri bechaini ka kuch bhi nahi, bas yeh dil hai jo tere bina karr raha hai, zindagi ki raahon mein khushi milti nahi. 💔😢",
+                
+                // Jani's Quotes
+                "Jo jazbaat tujh se jude the, wo ab bas dard ban gaye hain, teri yaadon se zindagi ab ek adhura safar lagti hai. 🥀💔",
+                "Meri bechaini ka kuch bhi nahi, bas yeh dil hai jo tere bina karr raha hai, zindagi ki raahon mein khushi milti nahi. 💔😢",
+                
+                // Young Stunners (YS) Quotes
+                "Zindagi ka raasta hai mushkil, dosti aur mohabbat mein dard ka silsila hai, ek pal bhi sukoon nahi milta. 🌺😢",
+                "Tere bina zindagi mein sukoon nahi, har pal dard se bhar gaya, tere bina yeh dil bas rone lagta hai. 😭💔",
+                
+                // Jokhay's Quotes
+                "Zindagi ki yeh raatein, bas dard aur udasi ki chaadar hai, tere bina har pal sukoon se door hai. 🌸😢",
+                "Mere dil ki dastaan hai adhuri, tere bina zindagi ki raahon mein bas ek khali pan hai. 💔🥀",
+                
+                // Additional Quotes
+                "Tere bina jeena hai mushkil, har pal dard se bhar gaya, tere bina zindagi ek andhera sa lagta hai. 😢💔",
+                "Tum hi ho zindagi, tum hi ho khushi, tum hi ho dard, tum hi ho har pal ki zaroorat. 💔😢"
+            ];
+        
+            const quoteButton = document.getElementById('quoteButton');
+            const heartContainer = document.getElementById('heartContainer');
+            const quote = document.getElementById('quote');
+        
+            quoteButton.addEventListener('click', function() {
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                quote.textContent = randomQuote;
+                heartContainer.classList.remove('hidden');
+                quote.style.opacity = 1;
+            });
+        });
+        
+    </script>
+</body>
+</html>
